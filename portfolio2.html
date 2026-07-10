@@ -574,15 +574,295 @@
         }
 
         /* Anchor Navigation Bar */
+
+        /* Resume */
+        .resume-dot {
+            position: absolute;
+            left: -7px;
+            top: 4px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 2px solid #6B7684;
+            background: var(--bg);
+            z-index: 1;
+        }
+
+        .resume-dot::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #6B7684;
+        }
+
+        .resume-dot.accent {
+            border-color: var(--accent);
+            width: 20px;
+            height: 20px;
+            left: -10px;
+            top: 1px;
+        }
+
+        .resume-dot.accent::after {
+            background: var(--accent);
+            width: 9px;
+            height: 9px;
+            top: 3.5px;
+            left: 3.5px;
+        }
+
+        .resume-col-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-strong);
+            margin-bottom: 40px;
+        }
+
+        .resume-org {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-strong);
+            margin-bottom: 6px;
+        }
+
+        .resume-date {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .resume-role {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-strong);
+            margin-bottom: 6px;
+        }
+
+        .resume-list {
+            margin: 0;
+            padding-left: 18px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 600px) {
+            .resume-grid { grid-template-columns: 1fr !important; }
+        }
     </style>
 </head>
 <body>
     <div class="progress-bar" id="progressBar"></div>
 
+    <!-- RESUME COVER -->
+    <section class="hero fade-in">
+        <h1 style="font-size: clamp(4.5rem, 11vw, 9rem);">Resume</h1>
+    </section>
+
+    <!-- RESUME -->
+    <section class="section fade-in">
+        <div class="resume-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; width: 100%;">
+            <div>
+                <h2 class="resume-col-title">Work</h2>
+
+                <div style="position: relative;">
+                    <div style="position: relative; padding-left: 32px; margin-bottom: 32px;">
+                        <span class="resume-dot accent"></span>
+                        <div style="position: absolute; left: 0px; top: 21px; bottom: -43px; border-left: 1px dashed rgba(255,255,255,0.25);"></div>
+                        <div style="display: flex; gap: 32px; flex-wrap: wrap;">
+                            <div style="width: 140px; flex-shrink: 0;">
+                                <h3 class="resume-org" style="color: var(--accent);">토스코어</h3>
+                                <p class="resume-date">2025.09 ~ 재직중<br>(11개월)</p>
+                            </div>
+                            <div style="flex: 1; min-width: 200px;">
+                                <h4 class="resume-role">Product Design Partner</h4>
+                                <ul class="resume-list">
+                                    <li>컴플라이언스 팀에서 개인정보 어드민 제작</li>
+                                    <li>토스알바 팀에서 토스알바 제품 제작</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="position: relative; padding-left: 32px; margin-bottom: 32px;">
+                        <span class="resume-dot"></span>
+                        <div style="position: absolute; left: 0px; top: 18px; bottom: -43px; border-left: 1px dashed rgba(255,255,255,0.25);"></div>
+                        <div style="display: flex; gap: 32px; flex-wrap: wrap;">
+                            <div style="width: 140px; flex-shrink: 0;">
+                                <h3 class="resume-org">카카오페이</h3>
+                                <p class="resume-date">2024.09 ~ 2025.09<br>(1년)</p>
+                            </div>
+                            <div style="flex: 1; min-width: 200px;">
+                                <h4 class="resume-role">Product Design Assistant</h4>
+                                <ul class="resume-list">
+                                    <li>자산관리 서비스 개선</li>
+                                    <li>신용/대출관리 서비스 개선</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="position: relative; padding-left: 32px;">
+                        <span class="resume-dot"></span>
+                        <div style="display: flex; gap: 32px; flex-wrap: wrap;">
+                            <div style="width: 140px; flex-shrink: 0;">
+                                <h3 class="resume-org">번개장터</h3>
+                                <p class="resume-date">2022.06 ~ 2022.09<br>(3개월)</p>
+                            </div>
+                            <div style="flex: 1; min-width: 200px;">
+                                <h4 class="resume-role">Product Design Intern</h4>
+                                <ul class="resume-list">
+                                    <li>거래후기 서비스 개선</li>
+                                    <li>디자인 시스템 구축</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="resume-col-title" style="margin-top: 100px;">Education</h2>
+
+                <div style="position: relative;">
+                    <div style="position: relative; padding-left: 32px; margin-bottom: 32px;">
+                        <span class="resume-dot"></span>
+                        <div style="position: absolute; left: 0px; top: 18px; bottom: -43px; border-left: 1px dashed rgba(255,255,255,0.25);"></div>
+                        <div style="display: flex; gap: 32px; flex-wrap: wrap;">
+                            <div style="width: 140px; flex-shrink: 0;">
+                                <h3 class="resume-org">숙명여자대학교</h3>
+                                <p class="resume-date">2018.03 ~ 2023.02</p>
+                            </div>
+                            <div style="flex: 1; min-width: 200px;">
+                                <h4 class="resume-role">건축디자인 (주전공)</h4>
+                                <ul class="resume-list">
+                                    <li>학점 4.14 / 4.5</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="position: relative; padding-left: 32px;">
+                        <span class="resume-dot"></span>
+                        <div style="display: flex; gap: 32px; flex-wrap: wrap;">
+                            <div style="width: 140px; flex-shrink: 0;">
+                                <h3 class="resume-org">숙명여자대학교</h3>
+                                <p class="resume-date">2018.03 ~ 2023.02</p>
+                            </div>
+                            <div style="flex: 1; min-width: 200px;">
+                                <h4 class="resume-role">시각영상디자인 (복수전공)</h4>
+                                <ul class="resume-list">
+                                    <li>학점 4.25 / 4.5</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="resume-col-title">Activity</h2>
+
+                <div style="position: relative;">
+                    <div style="position: relative; padding-left: 32px; margin-bottom: 32px;">
+                        <span class="resume-dot"></span>
+                        <div style="position: absolute; left: 0px; top: 18px; bottom: -43px; border-left: 1px dashed rgba(255,255,255,0.25);"></div>
+                        <div style="display: flex; gap: 32px; flex-wrap: wrap;">
+                            <div style="width: 140px; flex-shrink: 0;">
+                                <h3 class="resume-org">CMC</h3>
+                                <p class="resume-date">2024.06 ~ 2024.08<br>(3개월)</p>
+                            </div>
+                            <div style="flex: 1; min-width: 200px;">
+                                <h4 class="resume-role">Product Design</h4>
+                                <ul class="resume-list">
+                                    <li>기획자, 개발자들과 사진 필터 앱 출시</li>
+                                    <li>동아리 내 시상식에서 최우수상 수상</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="position: relative; padding-left: 32px; margin-bottom: 32px;">
+                        <span class="resume-dot"></span>
+                        <div style="position: absolute; left: 0px; top: 18px; bottom: -43px; border-left: 1px dashed rgba(255,255,255,0.25);"></div>
+                        <div style="display: flex; gap: 32px; flex-wrap: wrap;">
+                            <div style="width: 140px; flex-shrink: 0;">
+                                <h3 class="resume-org">학생창업팀</h3>
+                                <p class="resume-date">2023.01 ~ 2023.12<br>(1년)</p>
+                            </div>
+                            <div style="flex: 1; min-width: 200px;">
+                                <h4 class="resume-role">UI/GUI Design</h4>
+                                <ul class="resume-list">
+                                    <li>기획자, 개발자들과 굿즈 거래 플랫폼 출시</li>
+                                    <li>2023 예비창업패키지 합격</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="position: relative; padding-left: 32px;">
+                        <span class="resume-dot"></span>
+                        <div style="display: flex; gap: 32px; flex-wrap: wrap;">
+                            <div style="width: 140px; flex-shrink: 0;">
+                                <h3 class="resume-org">큐시즘</h3>
+                                <p class="resume-date">2022.03 ~ 2022.06<br>(4개월)</p>
+                            </div>
+                            <div style="flex: 1; min-width: 200px;">
+                                <h4 class="resume-role">Product Design</h4>
+                                <ul class="resume-list">
+                                    <li>기획자, 개발자들과 동네책방 웹서비스 제작</li>
+                                    <li>동아리 내 시상식에서 대상 수상</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="resume-col-title" style="margin-top: 100px;">Certificate</h2>
+
+                <div style="position: relative;">
+                    <div style="position: relative; padding-left: 32px; margin-bottom: 32px;">
+                        <span class="resume-dot"></span>
+                        <div style="position: absolute; left: 0px; top: 18px; bottom: -43px; border-left: 1px dashed rgba(255,255,255,0.25);"></div>
+                        <div style="display: flex; gap: 32px; flex-wrap: wrap;">
+                            <div style="width: 140px; flex-shrink: 0;">
+                                <h3 class="resume-org">데이터자격시험</h3>
+                                <p class="resume-date">2024.12</p>
+                            </div>
+                            <div style="flex: 1; min-width: 200px;">
+                                <h4 class="resume-role">SQLD</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="position: relative; padding-left: 32px;">
+                        <span class="resume-dot"></span>
+                        <div style="display: flex; gap: 32px; flex-wrap: wrap;">
+                            <div style="width: 140px; flex-shrink: 0;">
+                                <h3 class="resume-org">영어 회화</h3>
+                                <p class="resume-date">2024.03</p>
+                            </div>
+                            <div style="flex: 1; min-width: 200px;">
+                                <h4 class="resume-role">OPIC IH</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO COVER -->
+    <section class="hero fade-in">
+        <h1 style="font-size: clamp(4.5rem, 11vw, 9rem);">Portfolio</h1>
+    </section>
+
     <!-- HERO -->
     <section id="navIntro" class="hero fade-in">
         <h1>숲을 봐야 하는데<br>나무만 봐버렸습니다</h1>
-        <p class="subtitle">좁은 시야 때문에 많은 실패를 겪은 사연을 소개해요.</p>
+        <p class="subtitle">좁은 시야로 많은 실패를 겪었던 사연을 소개해요.</p>
     </section>
 
     <section class="section fade-in">
@@ -659,11 +939,11 @@
     </section>
 
     <section class="section fade-in" style="text-align: center; margin: 0 auto; max-width: none; width: 100vw; position: relative; left: 50%; transform: translateX(-50%); padding: 400px 40px 200px;">
-        <h2 class="case-title" style="font-size: clamp(2.2rem, 5.3vw, 4.2rem);">n번의 실험과<br>n번의 개선을 했어요</h2>
+        <h2 class="case-title" style="font-size: clamp(2.2rem, 5.3vw, 4.2rem);">지원 완료율을 올리기 위해<br>26번의 실험을 했어요</h2>
     </section>
 
     <section id="navCase1" class="section fade-in" style="text-align: center; margin: 0 auto; max-width: none; width: 100vw; position: relative; left: 50%; transform: translateX(-50%); transition: background-color 0.6s ease; padding: 400px 40px;">
-        <h2 class="case-title" style="font-size: clamp(2.2rem, 5.3vw, 4.2rem);">많은 실패 끝에<br>지원 완료율을 53.4% 올렸던<br><span style="color: #3182F6;">추천알바 강조 실험</span>을 소개할게요</h2>
+        <h2 class="case-title" style="font-size: clamp(2.2rem, 5.3vw, 4.2rem);">많은 실패 끝에<br>지원 완료율을 53.4% 올렸던<br>실험을 소개할게요</h2>
         <div style="display: flex; gap: 48px; justify-content: center; margin-top: 48px; align-items: center; width: 40%; margin-left: auto; margin-right: auto;">
             <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 12px;">
                 <span style="display: inline-block; background: rgba(255, 255, 255, 0.08); color: var(--text-secondary); font-size: 1.1rem; font-weight: 500; padding: 2px 8px; border-radius: 999px;">AS-IS</span>
@@ -803,7 +1083,7 @@
             <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 8px;">
                 <div style="flex: 1; border-radius: 6px; height: 32px; position: relative;">
                     <div style="width: 38%; min-width: 48px; height: 100%; background: rgba(255, 255, 255, 0.8); border-radius: 6px; position: relative;">
-                        <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 0.95rem; color: #17171C; font-weight: 600; text-align: right;">38%</span>
+                        <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 0.95rem; color: #17171C; font-weight: 500; text-align: right;">38%</span>
                     </div>
                     <span style="position: absolute; left: calc(38% + 12px); top: 50%; transform: translateY(-50%); font-size: 0.95rem; color: var(--text-strong); white-space: nowrap;">원하는 조건의 공고가 없어서</span>
                 </div>
@@ -811,7 +1091,7 @@
             <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 8px;">
                 <div style="flex: 1; border-radius: 6px; height: 32px; position: relative;">
                     <div style="width: 22%; min-width: 48px; height: 100%; background: rgba(255,255,255,0.15); border-radius: 6px; position: relative;">
-                        <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 0.95rem; color: var(--text-secondary); font-weight: 600; text-align: right;">22%</span>
+                        <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 0.95rem; color: var(--text-secondary); font-weight: 500; text-align: right;">22%</span>
                     </div>
                     <span style="position: absolute; left: calc(22% + 12px); top: 50%; transform: translateY(-50%); font-size: 0.95rem; color: var(--text-secondary); white-space: nowrap; opacity: 0.5;">지금 당장 알바를 구할 마음이 없어서</span>
                 </div>
@@ -819,7 +1099,7 @@
             <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 8px;">
                 <div style="flex: 1; border-radius: 6px; height: 32px; position: relative;">
                     <div style="width: 18%; min-width: 48px; height: 100%; background: rgba(255,255,255,0.15); border-radius: 6px; position: relative;">
-                        <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 0.95rem; color: var(--text-secondary); font-weight: 600; text-align: right;">18%</span>
+                        <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 0.95rem; color: var(--text-secondary); font-weight: 500; text-align: right;">18%</span>
                     </div>
                     <span style="position: absolute; left: calc(18% + 12px); top: 50%; transform: translateY(-50%); font-size: 0.95rem; color: var(--text-secondary); white-space: nowrap; opacity: 0.5;">어떤 업무를 하게 될지 몰라서</span>
                 </div>
@@ -827,7 +1107,7 @@
             <div style="display: flex; align-items: center; gap: 16px;">
                 <div style="flex: 1; border-radius: 6px; height: 32px; position: relative;">
                     <div style="width: 15%; min-width: 48px; height: 100%; background: rgba(255,255,255,0.15); border-radius: 6px; position: relative;">
-                        <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 0.95rem; color: var(--text-secondary); font-weight: 600; text-align: right;">15%</span>
+                        <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 0.95rem; color: var(--text-secondary); font-weight: 500; text-align: right;">15%</span>
                     </div>
                     <span style="position: absolute; left: calc(15% + 12px); top: 50%; transform: translateY(-50%); font-size: 0.95rem; color: var(--text-secondary); white-space: nowrap; opacity: 0.5;">사진, 위치 등 매장 정보가 충분하지 않아서</span>
                 </div>
@@ -966,19 +1246,24 @@
 
     <section id="navCase2" class="section fade-in">
         <p class="case-label" style="font-size: 1.6rem; color: #6B7684; letter-spacing: 0.05em;">Background</p>
-        <h2 class="case-title" style="font-size: clamp(2rem, 4.1vw, 3rem);">공고 상세에서 조건 불일치를<br>제거하는 실험을 한 적이 있는데요</h2>
+        <h2 class="case-title" style="font-size: clamp(2rem, 4.1vw, 3rem);">공고 상세에서 지원 완료율을<br>올리는 실험을 한 적이 있는데요</h2>
     </section>
 
     <section class="section fade-in">
         <p class="case-label" style="font-size: 1.6rem; color: #6B7684; letter-spacing: 0.05em;">Problem</p>
         <h2 class="case-title" style="font-size: clamp(2rem, 4.1vw, 3rem);">"가장 잘 맞는 공고라고 했으면서<br>왜 불일치가 있어요?"</h2>
-        <p class="case-subtitle" style="font-size: 1.5rem;">스코어링 기반의 추천으로, 5가지 조건 중 3가지만 맞아도 추천하는 구조였어요.</p>
+        <p class="case-subtitle" style="font-size: 1.5rem;">스코어링 기반의 추천으로, 일부 조건만 맞아도 추천하는 구조였어요.</p>
         <img src="inconsistency 1.png" alt="불일치 화면" style="width: 30%; border-radius: 20px; object-fit: cover; outline: 7px solid #333D4B; margin-top: 24px;">
     </section>
 
     <section class="section fade-in" style="padding-top: 200px;">
+        <h2 class="case-title" style="font-size: clamp(2rem, 4.1vw, 3rem);"><span style="opacity: 0.3;">일치 / 불일치 문구가 꼭 있어야 할까?</span></h2>
+        <h2 class="case-title" style="font-size: clamp(2rem, 4.1vw, 3rem); margin-top: 12px;">추천의 이유를 전달하는 커뮤니케이션 방식이자<br>이전 화면과의 맥락을 이어주는 도구였어요</h2>
+    </section>
+
+    <section class="section fade-in" style="padding-top: 200px;">
         <h2 class="case-title" style="font-size: clamp(2rem, 4.1vw, 3rem);"><span style="opacity: 0.3;">불일치를 숨겨버릴까?</span></h2>
-        <h2 class="case-title" style="font-size: clamp(2rem, 4.1vw, 3rem);">불일치를 숨기면 유저는 필요한 정보를 못 봐요<br>탐색 사용성을 헤치는 방법이었어요</h2>
+        <h2 class="case-title" style="font-size: clamp(2rem, 4.1vw, 3rem);">불일치를 숨기면 유저는 필요한 정보를 못 봐요<br>탐색 사용성을 해치는 방법이었어요</h2>
         <div style="display: inline-flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 48px; width: 30%;">
             <span style="display: inline-block; background: rgba(255, 255, 255, 0.08); color: var(--text-secondary); font-size: 1.1rem; font-weight: 500; padding: 4px 12px; border-radius: 999px;">시안</span>
             <img src="hidden (1).png" alt="불일치 숨김" style="width: 100%; border-radius: 20px; object-fit: cover; outline: 7px solid #333D4B;">
@@ -1108,8 +1393,8 @@
 
     <section class="section fade-in">
         <p class="case-label" style="font-size: 1.6rem; color: #6B7684; letter-spacing: 0.05em;">Solution</p>
-        <h2 class="case-title" style="font-size: clamp(2rem, 4.1vw, 3rem);">원하는 조건과 가장 부합하는<br>하나의 공고를 강조했어요</h2>
-        <p class="case-subtitle" style="font-size: 1.5rem;">V1: 일치 개수를 강조하면 공고 클릭률이 오를 것이다.<br>V2: 공고 하나만 강조하면 공고 클릭률이 오를 것이다.</p>
+        <h2 class="case-title" style="font-size: clamp(2rem, 4.1vw, 3rem);">어떤 조건이 일치하는지 강조하고<br>가장 잘 맞는 공고만 남겼어요</h2>
+        <p class="case-subtitle" style="font-size: 1.5rem;">V1: 일치 항목을 강조하면 공고 클릭률이 오를 것이다.<br>V2: 공고 하나만 강조하면 공고 클릭률이 오를 것이다.</p>
         <div style="display: flex; gap: 48px; justify-content: center; margin-top: 48px; align-items: center; width: 90%; margin-left: auto; margin-right: auto;">
             <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 12px;">
                 <span style="display: inline-block; background: rgba(255, 255, 255, 0.08); color: var(--text-secondary); font-size: 1.1rem; font-weight: 500; padding: 4px 12px; border-radius: 999px;">CON</span>
@@ -1187,7 +1472,7 @@
         <table class="compare-table" style="margin-top: 48px;">
             <thead>
                 <tr>
-                    <th style="font-size: 1.1rem;">가중치 리스트UI 필터 실험</th>
+                    <th style="font-size: 1.1rem;">표면적 접근의 실험들</th>
                     <th style="font-size: 1.1rem;">추천알바 강조 실험</th>
                 </tr>
             </thead>
@@ -1226,14 +1511,17 @@
 
     <section class="section fade-in">
         <h2 class="case-title" style="font-size: clamp(2rem, 4.1vw, 3rem);">팀이 앞단 퍼널과 인플로우에<br>집중할동안 이 시안은 잊혀졌어요</h2>
+        <h2 class="case-title" style="font-size: clamp(2rem, 4.1vw, 3rem); margin-top: 64px;">표면적인 문제에 집중할동안<br>제품의 성장은 정체 되었어요</h2>
     </section>
 
     <section class="section fade-in">
-        <h2 class="case-title" style="font-size: clamp(2rem, 4.1vw, 3rem);">조건 불일치 실험을 계기로, 추천의 가치를<br>제대로 전달하는게 중요하다는 생각이 들었어요</h2>
+        <h2 class="case-title" style="font-size: clamp(2rem, 4.1vw, 3rem);">한 발 물러나 제품의 큰 그림을 상상해봤어요</h2>
+        <h2 class="case-title" style="font-size: clamp(2rem, 4.1vw, 3rem); margin-top: 64px; color: var(--accent);">우리는 토스알바의 핵심 가치를<br>제대로 전달하지 못하고 있었어요</h2>
         <h2 class="case-title" style="font-size: clamp(2rem, 4.1vw, 3rem); margin-top: 64px;">그래서 인플로우에 집중하고 있는<br>PO,DA를 설득하기로 했어요</h2>
     </section>
 
     <section class="section fade-in">
+        <img src="data.png" alt="data" style="width: 60%; border-radius: 16px; object-fit: cover; margin-bottom: 40px;">
         <div style="display: flex; flex-direction: column; gap: 12px;">
             <div style="position: relative; display: inline-block; align-self: flex-start; margin-left: 12px;">
                 <span style="background: #2A2A30; color: var(--text-secondary); font-size: 1.2rem; padding: 12px 20px; border-radius: 16px; display: inline-block;">전체 퍼널에서 병목이 어디인지 데이터로 짚었어요.</span>
@@ -1251,7 +1539,7 @@
     </section>
 
     <section class="section fade-in">
-        <h2 class="case-title" style="font-size: clamp(2rem, 4.1vw, 3rem);">결과 화면의 지원 완료율을 올리는 것이<br>최우선 과제라는 공감대를 만들 수 있었어요</h2>
+        <h2 class="case-title" style="font-size: clamp(2rem, 4.1vw, 3rem);">매칭 결과를 받는 순간을 개선하는게<br>최우선이라는 공감대를 만들 수 있었어요</h2>
         <h2 class="case-title" style="font-size: clamp(2rem, 4.1vw, 3rem); margin-top: 64px;">결과적으로 매칭의 가치를<br>유저에게 전달할 수 있었어요</h2>
     </section>
 
@@ -1281,7 +1569,7 @@
         <!-- 사용성 디테일 챙기기 -->
         <div style="margin-top: 80px; text-align: left;">
             <h3 style="font-size: 1.5rem; font-weight: 600; color: #FFFFFF; margin-bottom: 8px;">사용성 디테일 챙기기</h3>
-            <p style="font-size: 1.3rem; color: rgba(255,255,255,0.6); line-height: 1.5;">처음에는 관성적으로 설계했어요. n번의 UT와 리서치를 하며 당연하게 생각하던 것들이<br>유저들에게는 당연하지 않을 수 있다는 걸 배웠고, 작은 문구도 한번 더 생각하게 됐어요.</p>
+            <p style="font-size: 1.3rem; color: rgba(255,255,255,0.6); line-height: 1.5;">처음에는 관성적으로 설계했어요. 약 50명의 유저를 만나며 당연하게 생각하던 것들이<br>유저들에게는 당연하지 않을 수 있다는 걸 배웠고, 작은 문구도 한번 더 생각하게 됐어요.</p>
             <img src="이미지 (23).png" alt="초기 화면" style="margin-top: 24px; border-radius: 12px; width: 60%;">
         </div>
 
